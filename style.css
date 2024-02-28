@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #6bacc8;
+  --general-color: #000;
+  --gray-color: #757575;
+  --informed-color: #db3333;
+  --white-color: #fff;
+  --border-color: #c7cace;
+  --filtered-color: #444a51;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/*start - header*/
+.top-head {
+  background-color: var(--primary-color);
+  & .inner {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20rem;
+    padding: 10px;
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--white-color);
+    }
+    & .i-phone {
+      display: flex;
+      gap: 12px;
+      & i {
+        color: var(--white-color);
+      }
+    }
+  }
+}
+.import-nav {
+  border-bottom: 2px solid var(--border-color);
+  & .inner {
+    display: flex;
+    align-items: center;
+    & .import-nav-left {
+      display: flex;
+      gap: 14rem;
+      align-items: center;
+      & .logo {
+        img {
+          width: 150px;
+        }
+      }
+      & .partners {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        & .p-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          & img {
+            width: 100px;
+          }
+        }
+      }
+    }
+    & .import-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-left: 13rem;
+      & .search {
+        position: relative;
+        & input {
+          border-radius: 4px;
+          border: 1px solid var(--border-color);
+          width: 277px;
+          height: 36px;
+          padding: 10px;
+          position: relative;
+        }
+        & .search-icon {
+          position: absolute;
+          right: 10px;
+          bottom: 6px;
+        }
+      }
+      & .favorite-basket {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        & .bag-shop {
+          position: relative;
+          & .item-count {
+            background-color: var(--primary-color);
+            position: absolute;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            bottom: 13px;
+            left: 7px;
+          }
+        }
+      }
+      & .language {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        & a {
+          color: #444a51;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          cursor: pointer;
+        }
+        & .active-lang {
+          text-decoration: underline;
+        }
+        & .layout {
+          width: 1px;
+          height: 22px;
+          color: #eceff2;
+        }
+      }
+    }
+  }
+}
+.mobile-icons {
+  display: none;
+  align-content: center;
+  justify-content: center;
+  gap: 15px;
+  & .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i {
+      color: var(--gray-color);
+    }
+  }
+  & .menu {
+    background-color: var(--primary-color);
+    & i {
+      color: var(--white-color);
+    }
+  }
+}
+.bottom-nav {
+  border-bottom: 1px solid #eceff2;
+  & .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 10px;
+    & a {
+      color: var(--filtered-color);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 17.5px;
+    }
+  }
+}
+.offcanvas-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  & a {
+    color: var(--general-color);
+  }
+}
+.offcanvas-logo {
+  & img {
+    width: 200px;
+  }
+}
+@media (max-width: 1200px) {
+  .i-phone,
+  .partners,
+  .import-nav-right,
+  .bottom-nav {
+    display: none !important;
+  }
+  .top-head .inner {
+    justify-content: center !important;
+  }
+  .mobile-icons {
+    display: flex !important;
+  }
+  .import-nav .inner {
+    justify-content: space-evenly !important;
+  }
+}
+/*end - header */
